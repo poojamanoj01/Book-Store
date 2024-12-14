@@ -1,0 +1,40 @@
+/* Container for the horizontal scroll */
+.horizontal-scroll-container {
+    display: flex;
+    overflow: hidden; /* Hide the overflow */
+    width: 100%; /* Full width */
+    position: relative;
+  }
+  
+  /* Cards will scroll horizontally */
+  .horizontal-scroll-wrapper {
+    display: flex;
+    animation: moveCards 15s linear infinite; /* Animation name, duration, timing function, and infinite loop */
+  }
+  
+  .card {
+    max-width: 250px; /* Adjust the card size */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    margin-right: 20px; /* Add some space between the cards */
+  }
+  
+  .card-img-top {
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure images fill the space */
+   
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  /* Define the animation for moving the cards */
+  @keyframes moveCards {
+    0% {
+      transform: translateX(0); /* Start at the original position */
+    }
+    100% {
+      transform: translateX(-100%); /* Move all cards to the left */
+    }
+  }
+  
